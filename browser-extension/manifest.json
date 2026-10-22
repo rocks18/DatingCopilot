@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Pairwise Dating Agent",
+  "version": "1.0.0",
+  "description": "Connects the active Bumble Web profile to the local Pairwise decision engine and executes Like or Pass actions.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "host_permissions": [
+    "http://127.0.0.1:3000/*",
+    "http://localhost:3000/*",
+    "https://bumble.com/*",
+    "https://*.bumble.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Pairwise Dating Agent",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://bumble.com/*", "https://*.bumble.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

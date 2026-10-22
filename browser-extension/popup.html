@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pairwise</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header><span class="mark">P</span><div><strong>Pairwise</strong><small>Dating agent</small></div><span id="dot" class="dot"></span></header>
+      <section class="status"><span id="phase">Checking Bumble…</span><p id="error"></p></section>
+      <section class="stats"><div><strong id="processed">0</strong><span>Processed</span></div><div><strong id="likes">0</strong><span>Likes</span></div><div><strong id="passes">0</strong><span>Passes</span></div></section>
+      <label>Profiles this run<input id="limit" type="number" min="1" max="250" value="50" /></label>
+      <button id="toggle">Start agent</button>
+      <p class="hint">Keep Pairwise running at localhost:3000 and leave the Bumble profile queue open.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

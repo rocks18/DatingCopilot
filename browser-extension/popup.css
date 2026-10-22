@@ -1,0 +1,26 @@
+:root { color-scheme: light; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; width: 330px; background: #f4f2ed; color: #191918; }
+main { padding: 18px; }
+header { display: flex; align-items: center; gap: 10px; padding-bottom: 15px; border-bottom: 1px solid #dcd8ce; }
+.mark { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #191918; color: white; font: italic 18px Georgia, serif; }
+header strong, header small { display: block; }
+header strong { font: 18px Georgia, serif; }
+header small { color: #6d6b65; font-size: 9px; text-transform: uppercase; letter-spacing: .12em; }
+.dot { margin-left: auto; width: 8px; height: 8px; border-radius: 50%; background: #aaa; }
+.dot.live { background: #2c8a65; box-shadow: 0 0 0 4px #dceee6; }
+.status { min-height: 58px; padding: 15px 0 8px; }
+.status span { font-size: 13px; font-weight: 650; }
+.status p { color: #bb4b48; font-size: 10px; margin: 5px 0 0; line-height: 1.35; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); background: #fbfaf7; border: 1px solid #dcd8ce; border-radius: 10px; }
+.stats div { padding: 12px; border-left: 1px solid #dcd8ce; }
+.stats div:first-child { border-left: 0; }
+.stats strong, .stats span { display: block; }
+.stats strong { font: 24px Georgia, serif; }
+.stats span { color: #6d6b65; font-size: 8px; text-transform: uppercase; letter-spacing: .06em; }
+label { display: flex; align-items: center; justify-content: space-between; margin: 14px 0 10px; color: #6d6b65; font-size: 11px; }
+input { width: 64px; padding: 7px; border: 1px solid #c9c4b8; border-radius: 7px; background: #fbfaf7; }
+button { width: 100%; min-height: 42px; border: 0; border-radius: 8px; background: #191918; color: white; font-weight: 700; cursor: pointer; }
+button.pause { color: #191918; background: #f7ead3; border: 1px solid #e1c99f; }
+button:disabled { opacity: .45; cursor: not-allowed; }
+.hint { color: #6d6b65; font-size: 9px; line-height: 1.45; margin: 10px 3px 0; }

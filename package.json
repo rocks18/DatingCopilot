@@ -1,0 +1,41 @@
+{
+  "name": "pairwise-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A private, local-first dating compatibility assistant.",
+  "scripts": {
+    "dev": "concurrently -k -n web,worker,android -c cyan,magenta,yellow \"next dev\" \"node --import tsx worker/runner.ts\" \"node --import tsx android/runner.ts\"",
+    "dev:web": "next dev",
+    "worker": "node --import tsx worker/runner.ts",
+    "android": "node --import tsx android/runner.ts",
+    "build": "next build",
+    "start": "concurrently -k -n web,worker,android -c cyan,magenta,yellow \"next start\" \"node --import tsx worker/runner.ts\" \"node --import tsx android/runner.ts\"",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "lucide-react": "^0.548.0",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.56.0",
+    "@types/node": "^24.7.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "concurrently": "^9.2.1",
+    "eslint": "^10.13.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.71.2",
+    "vitest": "^5.0.5"
+  }
+}
